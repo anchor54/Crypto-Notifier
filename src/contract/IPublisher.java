@@ -1,5 +1,7 @@
 package contract;
 
-public interface IPublisher<T> {
-    boolean publish(T data);
+import java.io.Serializable;
+
+public interface IPublisher {
+    <T extends Serializable> void publish(T data);
 }

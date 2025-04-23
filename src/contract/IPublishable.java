@@ -1,7 +1,10 @@
 package contract;
 
+import model.Event;
 import model.Topic;
 
-public interface IPublishable<T> {
-    void publish(Topic topic, T data);
+import java.io.Serializable;
+
+public interface IPublishable {
+    <T extends Serializable> void publish(Topic topic, Event<T> event);
 }

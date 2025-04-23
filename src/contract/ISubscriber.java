@@ -1,7 +1,9 @@
 package contract;
 
-import model.Topic;
+import model.Event;
 
-public interface ISubscriber<T> {
-    boolean notify(T data);
+import java.io.Serializable;
+
+public interface ISubscriber {
+    <T extends Serializable> void notify(Event<T> event);
 }
