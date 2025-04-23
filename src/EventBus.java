@@ -2,17 +2,14 @@ import contract.IPublishable;
 import contract.ISubscribeable;
 import contract.ISubscriber;
 import exception.TopicNotFoundException;
-import model.Event;
 import model.Topic;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Queue;
 import java.util.concurrent.*;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
-import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public class EventBus<T> implements IPublishable<T>, ISubscribeable<T> {
