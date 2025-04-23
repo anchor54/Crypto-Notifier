@@ -1,3 +1,5 @@
+package service;
+
 import contract.IPublishable;
 import contract.ISubscribeable;
 import contract.ISubscriber;
