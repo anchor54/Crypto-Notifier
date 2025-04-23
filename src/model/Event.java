@@ -17,6 +17,6 @@ public class Event<T extends Serializable> {
 
     @Override
     public String toString() {
-        return publishTimeStamp + "event-" + id + ":" + data;
+        return publishTimeStamp + " | event-" + id + ":" + data;
     }
 }
